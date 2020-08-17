@@ -1,28 +1,92 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app id="sandbox">
+    <v-navigation-drawer
+      v-model="primaryDrawer.model"
+      clipped
+      app
+      class="d-flex justify-space-between"
+    >
+      <v-list-item>
+        <v-list-item-avatar size="100" class="mt-5">
+          <v-img src="/images/profile.jpg"></v-img>
+        </v-list-item-avatar>
+      </v-list-item>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title>Andy Chan</v-list-item-title>
+          <v-list-item-subtitle>Game Developer</v-list-item-subtitle>
+          <v-list-item-subtitle>Graphics Engineer</v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+      <v-divider class="ma-0"></v-divider>
+
+      <v-list rounded>
+        <v-list-item-group color="primary">
+          <v-list-item
+            v-for="(item, i) in $router.options.routes"
+            :key="i"
+            :to="item.path"
+            style="text-decoration: none"
+          >
+            <v-list-item-icon>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>{{ item.name }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+
+      <template v-slot:append>
+        <v-divider class="ma-0"></v-divider>
+        <v-list-item>
+          <v-icon class="mr-4">fa-adjust</v-icon>
+          <v-switch v-model="$vuetify.theme.dark" primary inset></v-switch>
+        </v-list-item>
+      </template>
+    </v-navigation-drawer>
+
+    <v-app-bar clipped-left app v-if="$vuetify.breakpoint.mobile">
+      <v-app-bar-nav-icon @click.stop="primaryDrawer.model = !primaryDrawer.model"></v-app-bar-nav-icon>
+      <v-toolbar-title>Andy Chan</v-toolbar-title>
+    </v-app-bar>
+
+    <v-main>
+      <v-breadcrumbs :items="items"></v-breadcrumbs>
+      <router-view></router-view>
+    </v-main>
+
+    <v-footer app>
+      <span class="px-4">&copy; Andy Chan {{ new Date().getFullYear() }}</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  data: () => ({
+    primaryDrawer: {
+      model: null,
+    },
+  }),
+  computed: {
+    items() {
+      var items = [{ text: "Home", disabled: false, href: "/" }];
+      if (this.$route.path !== "/") {
+        for (var i in this.$route.matched) {
+          var route = this.$route.matched[i];
+          var match = route.path.match(/:(\w+)/);
+          items.push({
+            text: match === null ? route.name : this.$route.params[match[1]],
+            disabled: false,
+            href: route.path,
+          });
+        }
+      }
+      items[items.length - 1].disabled = true;
+      return items;
+    },
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

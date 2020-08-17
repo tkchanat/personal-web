@@ -1,0 +1,52 @@
+{
+    "name": "Andy Chan",
+    "avatar": "profile.jpg",
+    "description": "Hey there. I am a final year student at Hong Kong University of Science and Technology, majoring in computer science. My field interest is real-time graphics and game programming. Sometimes I'll challenge myself with ambitious projects and bold ideas. Especially tinkering with shaders and graphical elements in games. ",
+    "url": "https://andychan.work",
+    "education": [
+        {
+            "icon": "fa fa-globe-asia",
+            "institution": "Hong Kong University of Science and Technology",
+            "description": "Bachelor of Engineering, Computer Science (09/2016 - 06/2020)",
+            "coursework": [
+                "Applied Statistics and Linear Algebra",
+                "Computer Organization and Operating System",
+                "Data Structure and Algorithms",
+                "Software Engineering",
+                "Advanced Computer Graphics"
+            ]
+        },
+        {
+            "icon": "fa fa-globe-europe",
+            "institution": "KTH Royal Institite of Technology",
+            "description": "Exchange Study, Master's Program (01/2019 - 06/2019)",
+            "coursework": [
+                "Computer Graphics and Interaction",
+                "Music Communication and Music Technology",
+                "Machine Learning"
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "icon": "fa fa-tools",
+            "category": "Tools & Application",
+            "caption": "VisualStudio, Xcode, Git, Blender, Unity3D, Cocos2d-x, OpenAL, Dear ImGui"
+        },
+        {
+            "icon": "fa fa-code",
+            "category": "Programming Languages",
+            "caption": "C/C++, C#, Python, PHP, Rust, Javascript, HTML5"
+        },
+        {
+            "icon": "fa fa-palette",
+            "category": "Graphics API",
+            "caption": "DirectX11, OpenGL4.3, WebGL2"
+        },
+        {
+            "icon": "fa fa-language",
+            "category": "Language Proficiency - Written & Spoken",
+            "caption": "Cantonese (Native), Mandarin (Intermediate), English (IELTS 7.5), Japanese (JLPT N4)"
+        }
+    ]
+}

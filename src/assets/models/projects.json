@@ -1,0 +1,73 @@
+[
+    {
+        "markdown": "unsharp-masking.md",
+        "title": "Unsharp Masking",
+        "date": "2020-05-14",
+        "preview_img": "lena_um.png",
+        "tags": [
+            1
+        ],
+        "description": "Exploring the application of Gausian blur in the field of image processing.",
+        "gallery": [],
+        "members": []
+    },
+    {
+        "markdown": "volumetric-cloud.md",
+        "title": "Real Time Volumetric Cloud",
+        "date": "2019-11-01",
+        "preview_img": "vc6.png",
+        "tags": [
+            1
+        ],
+        "description": "An implementation of Fredrik Häggström's work. Demonstrating the dynamic lightings on a customizable cloudscape.",
+        "gallery": [],
+        "members": []
+    },
+    {
+        "markdown": "laplacian-editing.md",
+        "title": "Laplacian Smoothing and Deformation",
+        "date": "2019-10-10",
+        "preview_img": "acg_ls.png",
+        "tags": [
+            1
+        ],
+        "description": "Simulating fluid with Smoothed Particle Hydrodynamics (SPH) and metaballs. ",
+        "gallery": [],
+        "members": []
+    },
+    {
+        "markdown": "marching-cubes.md",
+        "title": "Marching Cubes with SPH",
+        "date": "2019-05-14",
+        "preview_img": "sph_fluid_simulation.png",
+        "tags": [
+            1
+        ],
+        "description": "Simulating fluid with Smoothed Particle Hydrodynamics (SPH) and metaballs. ",
+        "gallery": [
+            "sph_fluid_simulation.png",
+            "sph.gif",
+            "sph2.png"
+        ],
+        "members": [
+            "alexander"
+        ]
+    },
+    {
+        "markdown": "curve-editor.md",
+        "title": "Curve Editor",
+        "date": "2017-10-22",
+        "preview_img": "ce3.png",
+        "tags": [
+            1
+        ],
+        "description": "Exploring Bezier curves and spline interpolation/approximation.",
+        "gallery": [
+            "ce1.png",
+            "ce2.png",
+            "ce3.png",
+            "ce4.png"
+        ],
+        "members": []
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "GitHub",
+        "url": "https://github.com/tkchanat",
+        "icon": "fab fa-github",
+        "color": "blue-grey darken-3"
+    },
+    {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/andy-chan-9b8294155/",
+        "icon": "fab fa-linkedin",
+        "color": "light-blue darken-4"
+    },
+    {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/user/1647andychan",
+        "icon": "fab fa-youtube",
+        "color": "red darken-1"
+    },
+    {
+        "name": "Twitter",
+        "url": "https://twitter.com/tkchanat1",
+        "icon": "fab fa-twitter",
+        "color": "blue lighten-3"
+    },
+    {
+        "name": "Email",
+        "url": "mailto:andychancse@gmail.com",
+        "icon": "fa-envelope",
+        "color": "amber accent-4"
+    }
+]
