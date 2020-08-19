@@ -5,7 +5,7 @@
     "url": "https://andychan.work",
     "education": [
         {
-            "icon": "fa fa-globe-asia",
+            "icon": "fa-graduation-cap",
             "institution": "Hong Kong University of Science and Technology",
             "description": "Bachelor of Engineering, Computer Science (09/2016 - 06/2020)",
             "coursework": [
@@ -17,7 +17,7 @@
             ]
         },
         {
-            "icon": "fa fa-globe-europe",
+            "icon": "fa-graduation-cap",
             "institution": "KTH Royal Institite of Technology",
             "description": "Exchange Study, Master's Program (01/2019 - 06/2019)",
             "coursework": [
@@ -29,22 +29,22 @@
     ],
     "skills": [
         {
-            "icon": "fa fa-tools",
+            "icon": "fa-toolbox",
             "category": "Tools & Application",
             "caption": "VisualStudio, Xcode, Git, Blender, Unity3D, Cocos2d-x, OpenAL, Dear ImGui"
         },
         {
-            "icon": "fa fa-code",
+            "icon": "fa-code",
             "category": "Programming Languages",
             "caption": "C/C++, C#, Python, PHP, Rust, Javascript, HTML5"
         },
         {
-            "icon": "fa fa-palette",
+            "icon": "fa-palette",
             "category": "Graphics API",
             "caption": "DirectX11, OpenGL4.3, WebGL2"
         },
         {
-            "icon": "fa fa-language",
+            "icon": "fa-language",
             "category": "Language Proficiency - Written & Spoken",
             "caption": "Cantonese (Native), Mandarin (Intermediate), English (IELTS 7.5), Japanese (JLPT N4)"
         }

@@ -1,33 +1,33 @@
 <template>
   <div>
-    <v-parallax src="/images/snow.jpg" height=400></v-parallax>
+    <v-parallax src="/images/snow.jpg" height="400"></v-parallax>
     <v-container>
-      <p
-        class="my-5"
-        data-aos="fade-in"
-        data-aos-duration="1000"
-        data-aos-delay="250"
-      >{{ myself.description }}</p>
+      <p class="my-5">{{ myself.description }}</p>
       <hr />
       <div class="my-5">
-        <h1>EDUCATION</h1>
-        <div v-for="edu in myself.education" :key="edu.institution">
-          <v-icon>{{ edu.icon }}</v-icon>
-          <h3>{{ edu.institution }}</h3>
-          <p>{{ edu.description }}</p>
-          <ul style="text-align: left !important; position: relative; left: calc(50% - 200px)">
-            <li style="color: #AAA" v-for="(work, index) in edu.coursework" :key="index">{{ work }}</li>
-          </ul>
-        </div>
+        <h3>Education</h3>
+        <v-list-item v-for="edu in myself.education" :key="edu.institution">
+          <v-list-item-content>
+            <v-list-item-title>{{ edu.institution }}</v-list-item-title>
+            <v-list-item-subtitle>{{ edu.description }}</v-list-item-subtitle>
+            <ul class="mt-2">
+              <li v-for="(work, index) in edu.coursework" :key="index">{{ work }}</li>
+            </ul>
+          </v-list-item-content>
+        </v-list-item>
       </div>
       <hr />
       <div class="my-5">
-        <h1>SKILLS</h1>
-        <div v-for="skill in myself.skills" :key="skill.caption">
-          <v-icon>{{ skill.icon }}</v-icon>
-          <h3>{{ skill.category }}</h3>
-          <p style="color: #AAA">{{ skill.caption }}</p>
-        </div>
+        <h3>Skills</h3>
+        <v-list-item v-for="skill in myself.skills" :key="skill.caption">
+          <v-list-item-icon>
+            <v-icon>{{ skill.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>{{ skill.category }}</v-list-item-title>
+            <v-list-item-subtitle>{{ skill.caption }}</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
       </div>
     </v-container>
   </div>
@@ -36,10 +36,19 @@
 <script>
 import myself from "@/assets/models/myself.json";
 export default {
+  created() {
+    window.scrollTo(0, 0);
+  },
   data() {
     return {
       myself,
     };
+  },
+  metaInfo: {
+    title: "About",
+  },
+  track() {
+    this.$ga.page("/about");
   },
 };
 </script>

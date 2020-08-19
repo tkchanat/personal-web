@@ -88,5 +88,45 @@ export default {
       return items;
     },
   },
+  metaInfo: {
+    titleTemplate: (titleChunk) => {
+      return titleChunk ? `${titleChunk} - Andy Chan` : "Andy Chan";
+    },
+    htmlAttrs: {
+      lang: "en",
+      amp: true,
+    },
+  },
 };
 </script>
+
+<style>
+/*
+ *  STYLE 6
+ */
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #aaa;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+</style>

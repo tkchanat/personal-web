@@ -3,47 +3,85 @@
         "markdown": "unsharp-masking.md",
         "title": "Unsharp Masking",
         "date": "2020-05-14",
-        "preview_img": "lena_um.png",
-        "tags": [
-            1
-        ],
         "description": "Exploring the application of Gausian blur in the field of image processing.",
-        "gallery": [],
+        "category": "Graphics",
+        "tags": [
+            "Post Processing"
+        ],
+        "gallery": [
+            "lena_um.png"
+        ],
+        "members": []
+    },
+    {
+        "markdown": "game-engine.md",
+        "title": "Lobster Game Engine",
+        "date": "2020",
+        "description": "Yet another cross-platform OpenGL game engine written in C++. ",
+        "category": "Software",
+        "tags": [
+            "Game Engine",
+            "OpenGL",
+            "Final Year Project"
+        ],
+        "gallery": [
+            "engine7.png",
+            "engine1.png",
+            "engine2_0.png",
+            "engine4.png",
+            "engine5.png",
+            "engine6.png",
+            "post_6.jpg",
+            "post_6_1.png",
+            "post_7.png"
+        ],
         "members": []
     },
     {
         "markdown": "volumetric-cloud.md",
         "title": "Real Time Volumetric Cloud",
         "date": "2019-11-01",
-        "preview_img": "vc6.png",
+        "description": "A replication of Fredrik Häggström's work, demonstrating dynamic lightings on a customizable cloudscape.",
+        "category": "Graphics",
         "tags": [
-            1
+            "Ray Marching",
+            "Volumetric Rendering"
         ],
-        "description": "An implementation of Fredrik Häggström's work. Demonstrating the dynamic lightings on a customizable cloudscape.",
-        "gallery": [],
+        "gallery": [
+            "vc6.png",
+            "vc5.png",
+            "vc4.png"
+        ],
         "members": []
     },
     {
         "markdown": "laplacian-editing.md",
         "title": "Laplacian Smoothing and Deformation",
         "date": "2019-10-10",
-        "preview_img": "acg_ls.png",
-        "tags": [
-            1
-        ],
         "description": "Simulating fluid with Smoothed Particle Hydrodynamics (SPH) and metaballs. ",
-        "gallery": [],
+        "category": "Graphics",
+        "tags": [
+            "Geometry",
+            "Surface Editing"
+        ],
+        "gallery": [
+            "acg_ls.png",
+            "acg_ls1.png",
+            "acg_ls2.png"
+        ],
         "members": []
     },
     {
         "markdown": "marching-cubes.md",
         "title": "Marching Cubes with SPH",
         "date": "2019-05-14",
-        "preview_img": "sph_fluid_simulation.png",
-        "tags": [
-            1
-        ],
         "description": "Simulating fluid with Smoothed Particle Hydrodynamics (SPH) and metaballs. ",
+        "category": "Graphics",
+        "tags": [
+            "Geometry",
+            "Marching Cubes",
+            "Isosurface"
+        ],
         "gallery": [
             "sph_fluid_simulation.png",
             "sph.gif",
@@ -54,20 +92,116 @@
         ]
     },
     {
+        "markdown": "cvc.md",
+        "title": "VR CVC Training",
+        "date": "2019",
+        "description": "A two-player VR simulation serious game developed during my summer internship.",
+        "category": "Game",
+        "tags": [
+            "VR Simulation",
+            "Leap Motion",
+            "HTC Vive"
+        ],
+        "gallery": [
+            "cvc1.png",
+            "cvc2.png",
+            "cvc3.png",
+            "cvc4.png"
+        ],
+        "members": []
+    },
+    {
+        "markdown": "woods-of-kodama.md",
+        "title": "Wood of Kodama",
+        "date": "2019",
+        "description": "A singleplayer adventure game made in Global Game Jam 2019.",
+        "category": "Game",
+        "tags": [
+            "Adventure",
+            "2.5D"
+        ],
+        "gallery": [
+            "woods_of_kodama.png"
+        ],
+        "members": []
+    },
+    {
         "markdown": "curve-editor.md",
         "title": "Curve Editor",
         "date": "2017-10-22",
-        "preview_img": "ce3.png",
-        "tags": [
-            1
-        ],
         "description": "Exploring Bezier curves and spline interpolation/approximation.",
-        "gallery": [
-            "ce1.png",
-            "ce2.png",
-            "ce3.png",
-            "ce4.png"
+        "category": "Graphics",
+        "tags": [
+            "Geometry",
+            "Bezier Curves",
+            "Splines"
         ],
+        "gallery": [
+            "ce3.png",
+            "ce2.png",
+            "ce4.png",
+            "ce1.png"
+        ],
+        "members": []
+    },
+    {
+        "markdown": "kradia-the-little-tales.md",
+        "title": "Kradia: The Little Tales",
+        "date": "2017",
+        "description": "An indie combat game developed based on a board game",
+        "category": "Game",
+        "tags": [
+            "Demo",
+            "Combat",
+            "Platformer"
+        ],
+        "gallery": [
+            "kradia_the_little_tales.png"
+        ],
+        "members": []
+    },
+    {
+        "markdown": "wave-sumo.md",
+        "title": "Wave Sumo",
+        "date": "2017",
+        "description": "A two-player sumo combat game made in Global Game Jam 2017. ",
+        "category": "Game",
+        "tags": [
+            "2P",
+            "Combat",
+            "Couch Party Game"
+        ],
+        "gallery": [
+            "wave_sumo2.png",
+            "wave_sumo1.png",
+            "wave_sumo3.png",
+            "wave_sumo4.png",
+            "wave_sumo.png"
+        ],
+        "members": []
+    },
+    {
+        "markdown": "warfare-dimension.md",
+        "title": "Warfare Dimension",
+        "date": "2012 - 2014",
+        "description": "My very first game project developed with early version of Unity3d.",
+        "category": "Game",
+        "tags": [
+            "First Person Shooter"
+        ],
+        "gallery": [
+            "warfare_dimension.png"
+        ],
+        "members": []
+    },
+    {
+        "markdown": "",
+        "title": "ghost",
+        "date": "",
+        "description": "",
+        "category": "",
+        "tags": [],
+        "gallery": [],
         "members": []
     }
 ]

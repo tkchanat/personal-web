@@ -21,7 +21,10 @@
             </v-list-item>
             <v-list-item>
               <v-list-item-content>
-                <v-list-item-title :color="hover? contact.color: ''" class="title text-center">{{ contact.name }}</v-list-item-title>
+                <v-list-item-title
+                  :color="hover? contact.color: ''"
+                  class="title text-center"
+                >{{ contact.name }}</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list>
@@ -34,6 +37,9 @@
 <script>
 import contacts from "@/assets/models/contacts.json";
 export default {
+  created() {
+    window.scrollTo(0, 0);
+  },
   data: () => ({
     contacts,
   }),
@@ -57,6 +63,12 @@ export default {
     open_url(url) {
       window.open(url);
     },
+  },
+  metaInfo: {
+    title: "Contact",
+  },
+  track() {
+    this.$ga.page("/contact");
   },
 };
 </script>

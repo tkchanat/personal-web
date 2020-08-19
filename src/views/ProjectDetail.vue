@@ -7,15 +7,27 @@
     <v-card max-width="1000" class="mx-auto">
       <v-list-item>
         <v-list-item-title>
-          <v-icon>fa-clock</v-icon>
+          <v-icon>fa-calendar-alt</v-icon>
           <span class="mx-3">{{ project.date }}</span>
         </v-list-item-title>
       </v-list-item>
-      <v-img :src="'/images/'+project.preview_img" style="width: 100%; max-height: 400px"></v-img>
+
+      <v-img
+        v-if="project.gallery.length == 1"
+        :src="'/images/'+project.gallery[0]"
+        style="max-height:500px"
+      ></v-img>
+      <v-carousel continuous cycle v-else-if="project.gallery.length > 1">
+        <v-carousel-item
+          v-for="(imagePath, i) in project.gallery"
+          :key="i"
+          :src="'/images/'+imagePath"
+        ></v-carousel-item>
+      </v-carousel>
 
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="text-h4">{{ project.title }}</v-list-item-title>
+          <div class="text-h4">{{ project.title }}</div>
         </v-list-item-content>
       </v-list-item>
       <vue-markdown
@@ -41,6 +53,14 @@ export default {
     project() {
       return projects.find((e) => e.title === this.$route.params.detail);
     },
+  },
+  metaInfo() {
+    return {
+      title: this.$route.params.detail,
+    };
+  },
+  track() {
+    this.$ga.page("/project" + this.$route.params.detail);
   },
 };
 </script>
