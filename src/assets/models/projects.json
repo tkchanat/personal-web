@@ -1,12 +1,26 @@
 [
     {
+        "markdown": "raindrop-shader.md",
+        "title": "Raindrop Shader",
+        "date": "2020-08-11",
+        "description": "A replication of Martijn Steinrucken's work. Laying the foundation of future water-related shaders.",
+        "category": "Graphics",
+        "tags": [
+            "Post Processing"
+        ],
+        "gallery": [
+            "raindrop.png"
+        ],
+        "members": []
+    },
+    {
         "markdown": "unsharp-masking.md",
         "title": "Unsharp Masking",
         "date": "2020-05-14",
         "description": "Exploring the application of Gausian blur in the field of image processing.",
         "category": "Graphics",
         "tags": [
-            "Post Processing"
+            "Image Processing"
         ],
         "gallery": [
             "lena_um.png"

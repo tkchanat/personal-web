@@ -5,9 +5,9 @@ Most features are referencing [Fredrik's work](https://pdfs.semanticscholar.org/
 ---
 
 ## Development
-#### Day 1
+### Day 1
 ![](/images/vc1.png) Since this is my first time of doing graphics on a browser, I wanted to test out the feasibility and get myself comfortable using such environment. So I tried to construct a semi-transparent 3D scalar field and ray marched through the volume. The result that I got is as expected, a semi-transparent cube, suspended in mid-air. The only early optimization that I can throw in is to terminate the ray marching when the cumulated opacity hits one. ~~Surely, no significant improvement at all.~~ A ghostly cube may not seem like much, but everything will come together when the volume is initialized with the right configurations.
-#### Day 2
+### Day 2
 |      Red       |     Green      |      Blue      |     Alpha      |
 | :------------: | :------------: | :------------: | :------------: |
 | ![](/images/vc2_r.png) | ![](/images/vc2_g.png) | ![](/images/vc2_b.png) | ![](/images/vc2_a.png) |
@@ -16,7 +16,7 @@ To give more controls to the cloud distribution, a slider will be given for inte
 So far the overall cloud distribution was modeled nicely. However, the resolution looks very bad since the 3D volume was essentially stretched across the sky. Therefore, we need to add some `noise` to further shape the cloudscape in detail.
 ![](/images/vc2.png)
 
-#### Day 3
+### Day 3
 |      Red       |     Green      |      Blue      |     Alpha      |
 | :------------: | :------------: | :------------: | :------------: |
 | ![](/images/vc3_r.png) | ![](/images/vc3_g.png) | ![](/images/vc3_b.png) | ![](/images/vc3_a.png) |
@@ -24,18 +24,18 @@ Generating noise maps is time-consuming and definitely needed to be done offline
 Here we are following the aesthetic of nature, the beauty of fractals, to add in layers of details to our fluffy clouds. Tiling the combined result of our noise maps and multiply with our weather map, the shape of a cloud begins to take place. For sanity check, the cloud distribution slider also worked as expected. It's satifying to watch the cloudscape spans across the sky.
 ![](/images/vc3.png)
 
-#### Day 4
+### Day 4
 Now the basic geometry was done, it's time for some lighting work! To approximate the real physics going on inside a cloud, the light ray is needed to be traced back to the light source (sun) in each sample point to evaluate the amount of light that can be reached. However, iterating through each ray march steps and lighting steps could result in a squared complexity. I found that 2-3 lighting steps is enough for the minimum visual representation. More than that could result in severe performance drop (i.e. <30FPS on a 1080 display). 
 `Beer's law` is used to calculate the attenuation value at each sample point. Here the density map in our weather map comes to play, as the law relies on the mediums properties. With the specified light color, the clouds are shaded correctly to the color we want.
 ![](/images/vc4.png)
 
-#### Day 5
+### Day 5
 Until now, I'm using a skybox as the background but that doesn't reflect the sun position and light direction. Luckily, three.js has an example code on a fully functional sky dome with dynamic lightings. Thus I shamelessly applied it in order to save my time. 
 Extending from the previous work, the only adjustment needed to be done is to match our light color with the new sky color. Rather than extracting the sky color from the three.js example shader, I prefer hardcode the transition colors for artistic reason. 
 Everything are now globally lit according to the sun position, yet something feels ... \"off\" in some sense. It's because the `silver-lining effect` is missing. See, normally clouds directly in-front of the sun would have a brighter outline as light shines behind it and reached our eyes. Therefore, the `Henyey-Greenstein's phase function` is augmented to our shading equation. It takes the in/out and isotropic scattering into accounts, and of course the light angle between the light direction and camera ray direction. 
 ![](/images/vc5.png) Now not only the cloud's outline looks better, but also you can easily tell where the sun is located even if it's occluded. Overall, the work is done here even though there're lots of optimization work could be done to run on lower specification devices. For example, the motion vector approach mentioned in the paper wasn't implemented here, and early termination in ray marching as to alleviate the average performance. 
 
-#### Extra
+### Extra
 ![](/images/vc6.png)
 I've added a terrain model just for filling the emptiness. And you're able to navigate the enrionment using \"Minecraft-style\" controls. To tackle more on the banding effect caused by ray marching, a `blue noise` texture was applied to offset individual rays. 
 Make sure to try out the [demo](https://tkchanat.github.io/webgl-volumetric-cloud/) if your browser supports WebGL2 (Google Chrome is recommended). Try to tweak on the parameters and observe the changes. :cloud::sunny::sunglasses:
