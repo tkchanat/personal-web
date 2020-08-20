@@ -10,7 +10,7 @@ Vue.config.productionTip = false
 Vue.component('vue-markdown', VueMarkdown)
 
 Vue.use(VueMeta, { refreshOnceOnNavigation: true })
-Vue.use(VueAnalytics, { id: 'UA-140769402-1'})
+Vue.use(VueAnalytics, { id: 'UA-140769402-1' })
 
 new Vue({
   vuetify,

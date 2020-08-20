@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-btn color="primary" text rounded @click="go_back()">
+    <v-btn color="primary" text rounded @click="go_back()" class="mb-4">
       <v-icon left>fa-chevron-left</v-icon>Back
     </v-btn>
 
@@ -31,22 +31,39 @@
         </v-list-item-content>
       </v-list-item>
       <vue-markdown
+        v-model="md"
         class="vue-markdown pa-5"
+        @rendered="modifyTables"
       >{{ require("!raw-loader!@/assets/markdowns/"+project.markdown).default }}</vue-markdown>
     </v-card>
   </v-container>
 </template>
 
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script>
 import projects from "@/assets/models/projects.json";
 export default {
   created() {
     window.scrollTo(0, 0);
   },
-  data: () => ({}),
+  data: () => ({
+    md: String
+  }),
   methods: {
     go_back() {
       window.history.back();
+    },
+    modifyTables(outHtml) {
+      var tables = document.getElementsByClassName("table");
+      var w = [];
+      Array.prototype.forEach.call(tables, function (tbl) {
+        var parent = tbl.parentNode;
+        var wrapper = document.createElement("div");
+        wrapper.style.overflowX = "auto";
+        parent.insertBefore(wrapper, tbl);
+        wrapper.appendChild(tbl);
+      });
+      this.md = outHtml;
     },
   },
   computed: {
@@ -80,6 +97,7 @@ export default {
 }
 .vue-markdown table td img {
   padding: 0.5rem;
+  min-width: 200px;
 }
 .v-application pre > code {
   background-color: unset !important;
