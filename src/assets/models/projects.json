@@ -1,5 +1,19 @@
 [
     {
+        "markdown": "dithering-transparency.md",
+        "title": "Dithering Transparency",
+        "date": "2020-08-25",
+        "description": "Making dithering effects on penetrable objects, with Schrödinger's cat!",
+        "category": "Graphics",
+        "tags": [
+            "Dithering"
+        ],
+        "gallery": [
+            "dither.png"
+        ],
+        "members": []
+    },
+    {
         "markdown": "raindrop-shader.md",
         "title": "Raindrop Shader",
         "date": "2020-08-11",
