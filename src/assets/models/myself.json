@@ -1,6 +1,4 @@
 {
-    "name": "Andy Chan",
-    "avatar": "profile.jpg",
     "description": "Hey there. I am a final year student at Hong Kong University of Science and Technology, majoring in computer science. My field interest is real-time graphics and game programming. Sometimes I'll challenge myself with ambitious projects and bold ideas. Especially tinkering with shaders and graphical elements in games. ",
     "url": "https://andychan.work",
     "education": [
@@ -31,17 +29,87 @@
         {
             "icon": "fa-toolbox",
             "category": "Tools & Application",
-            "caption": "VisualStudio, Xcode, Git, Blender, Unity3D, Cocos2d-x, OpenAL, Dear ImGui"
+            "caption": "Building quality codes and games",
+            "items": [
+                {
+                    "name": "VisualStudio",
+                    "img": "vs.png"
+                },
+                {
+                    "name": "VSCode",
+                    "img": "vscode.png"
+                },
+                {
+                    "name": "XCode",
+                    "img": "xcode.png"
+                },
+                {
+                    "name": "Git",
+                    "img": "git.png"
+                },
+                {
+                    "name": "Unity3D",
+                    "img": "unity.png"
+                },
+                {
+                    "name": "UE4",
+                    "img": "ue4.png"
+                },
+                {
+                    "name": "Blender",
+                    "img": "blender.png"
+                }
+            ]
         },
         {
             "icon": "fa-code",
             "category": "Programming Languages",
-            "caption": "C/C++, C#, Python, PHP, Rust, Javascript, HTML5"
+            "caption": "Speaking the language of the gods",
+            "items": [
+                {
+                    "name": "C/C++",
+                    "img": "cpp.png"
+                },
+                {
+                    "name": "C#",
+                    "img": "cs.png"
+                },
+                {
+                    "name": "Rust",
+                    "img": "rust.png"
+                },
+                {
+                    "name": "Python",
+                    "img": "python.png"
+                },
+                {
+                    "name": "PHP",
+                    "img": "php.png"
+                },
+                {
+                    "name": "Javascript",
+                    "img": "js.png"
+                }
+            ]
         },
         {
             "icon": "fa-palette",
             "category": "Graphics API",
-            "caption": "DirectX11, OpenGL4.3, WebGL2"
+            "caption": "Love those pixels <3",
+            "items": [
+                {
+                    "name": "DirectX11",
+                    "img": "dx11.png"
+                },
+                {
+                    "name": "OpenGL4",
+                    "img": "opengl.png"
+                },
+                {
+                    "name": "WebGL2",
+                    "img": "webgl.png"
+                }
+            ]
         },
         {
             "icon": "fa-language",

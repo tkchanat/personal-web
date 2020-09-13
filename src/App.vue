@@ -1,7 +1,7 @@
 <template>
-  <v-app id="sandbox">
+  <v-app dark>
     <v-navigation-drawer
-      v-model="primaryDrawer.model"
+      v-model="model"
       clipped
       app
       class="d-flex justify-space-between"
@@ -15,7 +15,7 @@
         <v-list-item-content>
           <v-list-item-title>Andy Chan</v-list-item-title>
           <v-list-item-subtitle>Game Developer</v-list-item-subtitle>
-          <v-list-item-subtitle>Graphics Engineer</v-list-item-subtitle>
+          <v-list-item-subtitle>Graphics Programmer</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
       <v-divider class="ma-0"></v-divider>
@@ -48,7 +48,7 @@
     </v-navigation-drawer>
 
     <v-app-bar clipped-left app v-if="$vuetify.breakpoint.mobile">
-      <v-app-bar-nav-icon @click.stop="primaryDrawer.model = !primaryDrawer.model"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="model = !model"></v-app-bar-nav-icon>
       <v-toolbar-title>Andy Chan</v-toolbar-title>
     </v-app-bar>
 
@@ -66,9 +66,8 @@
 <script>
 export default {
   data: () => ({
-    primaryDrawer: {
       model: null,
-    },
+      dark: true,
   }),
   computed: {
     items() {

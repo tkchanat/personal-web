@@ -54,6 +54,7 @@ export default {
       window.history.back();
     },
     modifyTables(outHtml) {
+      // tables
       var tables = document.getElementsByClassName("table");
       var w = [];
       Array.prototype.forEach.call(tables, function (tbl) {
