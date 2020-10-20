@@ -8,7 +8,7 @@
       </v-col>
     </v-row>
 
-    <v-card max-width="800" class="mx-auto my-8 px-6">
+    <v-card max-width="600" class="mx-auto my-8 px-6">
       <a
         class="twitter-timeline"
         href="https://twitter.com/tkchanat1?ref_src=twsrc%5Etfw"
