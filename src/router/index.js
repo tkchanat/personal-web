@@ -6,15 +6,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    icon: 'fa-home',
-    component: () => import('../views/Home.vue')
-  },
-  {
-    path: '/about',
-    name: 'About',
-    icon: 'fa-address-card',
-    component: () => import('../views/About.vue')
+    redirect: { name: 'Project' }
   },
   {
     path: '/project',
@@ -34,6 +26,12 @@ const routes = [
         component: () => import('../views/ProjectDetail.vue')
       }
     ]
+  },
+  {
+    path: '/about',
+    name: 'About',
+    icon: 'fa-address-card',
+    component: () => import('../views/About.vue')
   },
   {
     path: '/contact',

@@ -23,7 +23,7 @@
       <v-list rounded>
         <v-list-item-group color="primary">
           <v-list-item
-            v-for="(item, i) in $router.options.routes"
+            v-for="(item, i) in $router.options.routes.slice(1)"
             :key="i"
             :to="item.path"
             style="text-decoration: none"
